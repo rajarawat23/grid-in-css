@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            display: grid;
+            border: 1px solid black;
+            grid-template-columns:repeat(3,1fr) ;
+            gap: 2%;
+            padding: 1%;
+            height: 25%;
+            width: 20%;
+        }
+        img{
+            width: 100%;
+            height:100%;
+            overflow: hidden;
+        }
+        #pallete{
+            grid-column: 1/3;
+            height: 200px;
+        }
+        #lab{
+            grid-row: 2/4;
+            
+        }
+        #syringe{
+            grid-row: 2/4;
+            grid-column: 3/4;
+        }
+        #text_container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10%;
+            width: 10%;
+            height: 10%;
+            border: 2px solid black;
+            padding: 1%;
+        }
+        #text_container div {
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+            background-color: wheat;
+            overflow: hidden;
+        }
+        #a {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        #b {
+            grid-column: 3/7;
+            grid-row: 1/4;
+        }
+        #c {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        #D {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            width: 500px;
+            height: 80px; ;
+            gap: 5%;                       
+        }
+        .container div{
+            height: 100%;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            border: 1px solid black;
+            padding: 0.5%;
+        }
+        .box1{
+           grid-row: 4/2;
+           background-color: grey;
+        }
+        .box2{
+            grid-row: 4/2;
+        }
+        .box3{
+            background-color: grey;
+        }
+        .box5{
+            background-color: grey;
+        }
+        .box7{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h3>Q1.Create an image gallery using a CSS grid.</h3>
+    <div class="gallery">
+        <img id="pallete" src="https://digitalsynopsis.com/wp-content/uploads/2018/06/flat-color-palettes-3.png" alt="">
+        <img id="rainbow" src="https://media.istockphoto.com/id/467751212/vector/color-palette-vector-illustration.webp?b=1&s=612x612&w=0&k=20&c=FAT66sVRgIHOZZvagab88NogdegLLpOBC2QFE5JwoOk=" alt="">
+        <img id="lab" src="https://thumbs.dreamstime.com/b/scientist-working-lab-doctor-making-microbiology-research-laboratory-tools-microscope-test-tubes-equipment-coronavirus-covid-177174817.jpg" alt="">
+        <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWchX-w0vAfxw22D5Od0S49eq5oF05o-Ym_A&s" alt="">
+        <img id="blood" src="data:image/jpeg;base64,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" alt="">
+        <img id="syringe" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzCiPl_uWCguZT_rRw7V--1VSXPgOYudnXooc1O0c1PtJO1KB2trhpVwCH6UaSboSR6WY&usqp=CAU" alt="">
+    </div>
+    <h3>Q2.Write code to arrange containers with texts A, B, C, and D as shown in the below image</h3>
+    <div id="text_container" >
+        <div id="a" >A</div>
+        <div id="b" >B</div>
+        <div id="c" >C</div>
+        <div id="D" >D</div>
+    </div>
+    <h3>Q3.Explain the use of grid-auto-row and grid-auto-column using code examples</h3>
+    <p>Ans. The grid-auto-rows and grid-auto-columns properties in CSS Grid are used to define the size of rows and columns that are automatically created when grid items are placed outside the explicitly defined grid structure. For example, if you define only two columns using grid-template-columns and then add a third item, it will automatically be placed in a new row. In this case, grid-auto-rows controls the height of that new row. Similarly, if you only define rows and an item is placed in a column that wasn’t explicitly defined, then grid-auto-columns determines the width of that new column. These properties are helpful for managing the layout of dynamically added or positioned grid items, ensuring that even implicitly created rows or columns maintain consistent sizing</p>
+    <h3>Q4. Write CSS to show numbers as shown in the figure, without altering the below html code.</h3>
+    <div class="container">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+    <div class="box box6">6</div>
+    <div class="box box7">7</div>
+    <div class="box box8">8</div>
+</div>
+</body>
+</html>
